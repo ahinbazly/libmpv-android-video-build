@@ -66,10 +66,10 @@ jobs:
           name: artifact
           path: /home/runner/work/libmpv-android-video-build/libmpv-android-video-build/buildscripts/*.jar
       - uses: softprops/action-gh-release@v1
-        if: github.ref == 'refs/heads/main' || inputs.release == true
+        if: inputs.release == true
         with:
-          draft: true
+          draft: false
           prerelease: false
-          tag_name: "vnext"
+          tag_name: "v1.2.6-subx1"
           files: |
             /home/runner/work/libmpv-android-video-build/libmpv-android-video-build/buildscripts/*.jar
